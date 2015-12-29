@@ -16,22 +16,22 @@ gem 'rubyzip'
 gem 'carrierwave'
 gem 'graphicsmagick'
 
+# job & server management
+gem 'delayed_job_active_record'
+gem 'exception_notification' # configured in config/environments/production.rb
+
 ##################
 # asset pipeline #
 ##################
 
-# jquery
+# view libraries
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
-
-# JSON
-gem 'jbuilder'
-
-# view utility
 gem 'bootstrap-sass'
 gem 'redcarpet'
 
 # asset languages
+gem 'jbuilder'
 gem 'sass-rails'
 gem 'uglifier'
 gem 'haml'
