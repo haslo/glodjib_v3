@@ -28,7 +28,6 @@ gem 'jquery-ui-rails'
 gem 'jbuilder'
 
 # view utility
-gem 'will_paginate'
 gem 'bootstrap-sass'
 gem 'redcarpet'
 
