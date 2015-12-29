@@ -5,11 +5,9 @@ source 'https://rubygems.org'
 ##########
 
 # rails, db
-gem 'rails', '>= 5.0.0.beta1', '< 5.1'
-# gem 'rails', github: 'rails/rails'
-gem 'turbolinks'
+gem 'rails', github: 'rails/rails'
 gem 'pg'
-gem 'devise'
+gem 'devise', github: 'plataformatec/devise' # needed for rails 5 compatibility
 
 # file handling
 gem 'rubyzip'
@@ -50,6 +48,6 @@ end
 group :development do
   gem 'web-console'
   gem 'pry'
-  gem 'spring'
+  # gem 'spring'
   gem 'brakeman'
 end
