@@ -20,8 +20,10 @@ from their own home base. It's what I was looking for, and didnt' find.
 
 I'll start with storage management, then interfaces, and work my way out from there. v1 got stuck because I started with
 Flickr and didn't think of the other interfaces (hopefully Twitter, G+, Facebook, Ello, 500px, probably more) and would
-have had to refactor everything. v2 never really started, but there's some AngularJS basics in there. So this is the
-third try. Let's see what happens.
+have had to refactor everything. I used Flickr as main storage instead of building my own, and that only works for people who
+have Flickr as their most-used platform - and that didn't apply to me any more after the Yahoo redesign in 2013.
+
+v2 never really started, but there's some AngularJS basics in there. So this is the third try. Let's see what happens.
 
 # License
 
