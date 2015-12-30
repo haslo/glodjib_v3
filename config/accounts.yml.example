@@ -1,0 +1,11 @@
+default: &default
+  flickr:
+    user_id: '1234'
+    api_key: '1234'
+    shared_secret: '1234'
+
+development:
+  <<: *default
+
+test:
+  <<: *default
