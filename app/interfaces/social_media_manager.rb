@@ -1,5 +1,6 @@
 class SocialMediaManager
   include ::Concerns::InterfaceAutoloader
+  attr_reader :interfaces
 
   class NotAllInterfacesFound < StandardError; end
 
