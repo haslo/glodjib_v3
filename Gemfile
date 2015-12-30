@@ -18,6 +18,9 @@ gem 'graphicsmagick'
 gem 'delayed_job_active_record'
 gem 'exception_notification' # configured in config/environments/production.rb
 
+# social media
+gem 'flickraw'
+
 ##################
 # asset pipeline #
 ##################
