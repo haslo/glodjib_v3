@@ -22,3 +22,14 @@ I'll start with storage management, then interfaces, and work my way out from th
 Flickr and didn't think of the other interfaces (hopefully Twitter, G+, Facebook, Ello, 500px, probably more) and would
 have had to refactor everything. v2 never really started, but there's some AngularJS basics in there. So this is the
 third try. Let's see what happens.
+
+# License
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">
+<img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" />
+</a>
+
+This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative
+Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.
+
+I can always open it up later.
