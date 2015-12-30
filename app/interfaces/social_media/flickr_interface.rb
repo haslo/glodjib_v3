@@ -1,25 +1,23 @@
 module SocialMedia
   class FlickrInterface
+    class << self
 
-    def initialize(image)
-      @image = image
+      def index
+        # TODO
+      end
+
+      def create_from(image)
+        # TODO
+      end
+
+      def update_data_from(image)
+        # TODO
+      end
+
+      def destroy_for(image)
+        # TODO
+      end
+
     end
-
-    def self.index
-      # TODO
-    end
-
-    def create
-      # TODO
-    end
-
-    def update_data
-      # TODO
-    end
-
-    def destroy
-      # TODO
-    end
-
   end
 end
