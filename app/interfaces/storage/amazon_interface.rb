@@ -1,8 +1,9 @@
 module Storage
   class AmazonInterface
+    include ::Storage::Concerns::MultiResizer
 
-    def initialize(storable)
-      # TODO
+    def initialize(image)
+      @image = image
     end
 
     def store_data
