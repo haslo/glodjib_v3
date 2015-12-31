@@ -20,6 +20,7 @@ gem 'exception_notification' # configured in config/environments/production.rb
 
 # social media
 gem 'flickraw'
+gem 'twitter'
 
 ##################
 # asset pipeline #
