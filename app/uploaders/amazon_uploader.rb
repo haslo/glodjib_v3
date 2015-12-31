@@ -6,4 +6,8 @@ class AmazonUploader < CarrierWave::Uploader::Base
     raise 'TODO'
   end
 
+  def extension_white_list
+    %w(jpg jpeg gif png)
+  end
+
 end
