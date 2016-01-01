@@ -3,7 +3,7 @@
 Image management hub for photographers. With direct integration into many social media platforms,
 and a blogging platform of its own.
 
-# Concept
+## Concept
 
 That's mostly what there is by now. A concept. This is it:
 
@@ -25,7 +25,15 @@ have Flickr as their most-used platform - and that didn't apply to me any more a
 
 v2 never really started, but there's some AngularJS basics in there. So this is the third try. Let's see what happens.
 
-# License
+## Social Media Integration
+
+These are the three current test accounts for the social media integration of the platform:
+
+* https://twitter.com/glodjib
+* https://www.flickr.com/photos/95789229@N03/
+* https://www.flickr.com/photos/138107723@N03/
+
+## License
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">
 <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" />
