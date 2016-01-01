@@ -17,7 +17,7 @@ class SocialMediaManager
   private
 
   def get_interfaces_for(target_interfaces)
-    targets = Array(target_interfaces)
+    targets = Array(target_interfaces).map(&:to_sym)
     found_interfaces = @interfaces.select do |name, _klass|
       targets.delete(name)
     end

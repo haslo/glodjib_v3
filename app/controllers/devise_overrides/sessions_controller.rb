@@ -5,7 +5,7 @@ class DeviseOverrides::SessionsController < Devise::SessionsController
   skip_before_filter :authenticate_user_from_token!, only: [:new, :create]
 
   def new
-    create
+    raise ActionController::RoutingError.new('Not Found')
   end
 
   def create
