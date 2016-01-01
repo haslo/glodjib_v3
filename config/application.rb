@@ -16,7 +16,9 @@ module GlodjibV3
     # Only loads a smaller set of middleware suitable for API only apps.
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
-    config.api_only = true
+
+    # TODO check if still bugged with before_action
+    # config.api_only = true
 
     # I18n locale and time zone settings
     config.time_zone = 'Bern'
