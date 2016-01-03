@@ -40,7 +40,7 @@ module V1
     private
 
     def image_params
-      params.require(:image).allow(:title, :description)
+      params.require(:image).permit(:title, :description)
     end
 
   end
