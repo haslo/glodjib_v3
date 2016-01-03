@@ -10,30 +10,36 @@ module V1
     end
 
     def create
-      image = ::V1::Image.new(image_params)
-      image.user = current_user
-      if image.save
-        render json: {status: 'ok'}, status: :ok
-      else
-        render json: {errors: image.errors.messages}, status: :unprocessable_entity
+      ActiveRecord::Base.transaction do
+        image = ::V1::Image.new(image_params)
+        image.user = current_user
+        if image.save
+          render json: {status: 'ok'}, status: :ok
+        else
+          render json: {errors: image.errors.messages}, status: :unprocessable_entity
+        end
       end
     end
 
     def update
-      image = current_user.images.find(params[:id])
-      if image.update_attributes(image_params)
-        render json: {status: 'ok'}, status: :ok
-      else
-        render json: {errors: image.errors.messages}, status: :unprocessable_entity
+      ActiveRecord::Base.transaction do
+        image = current_user.images.find(params[:id])
+        if image.update_attributes(image_params)
+          render json: {status: 'ok'}, status: :ok
+        else
+          render json: {errors: image.errors.messages}, status: :unprocessable_entity
+        end
       end
     end
 
     def destroy
-      image = current_user.images.find(params[:id])
-      if image.destroy
-        render json: {status: 'ok'}, status: :ok
-      else
-        render json: {errors: 'could not destroy'}, status: :unprocessable_entity
+      ActiveRecord::Base.transaction do
+        image = current_user.images.find(params[:id])
+        if image.destroy
+          render json: {status: 'ok'}, status: :ok
+        else
+          render json: {errors: 'could not destroy'}, status: :unprocessable_entity
+        end
       end
     end
 

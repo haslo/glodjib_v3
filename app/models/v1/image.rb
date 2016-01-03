@@ -5,7 +5,10 @@ module V1
     has_many :image_sizes, class_name: '::V1::ImageSize', dependent: :destroy
 
     def file=(file)
-      LocalStorageImageSize.new(image: self, file: file).save!
+      image_size = LocalStorageImageSize.new(image: self, file: file)
+      image_size.save!
+      image = GraphicsMagick::Image.new(image_size.file.path)
+      image_size.update_attribute(:longer_side, [image.width, image.height].max)
     end
 
   end
