@@ -35,8 +35,8 @@ module SocialMedia
       def init_authenticated_flickraw(flickr_config)
         flickr = init_flickraw(flickr_config)
         # TODO move these into db config
-        access_token = '72157662278415489-df930380f0b4e82a'
-        access_secret = '75cd4930a23cdcc9'
+        access_token = '72157663024568305-41f9bccba40c7a92'
+        access_secret = '2716e06f9da9ace2'
         if access_token.present? && access_secret.present?
           flickr.access_token = access_token
           flickr.access_secret = access_secret

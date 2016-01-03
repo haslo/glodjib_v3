@@ -9,15 +9,15 @@ class SocialMediaManager
   end
 
   def delegate_to_interfaces(method, target_interfaces, *args)
-    get_interfaces_for(target_interfaces).each do |_name, klass|
-      klass.__send__(method, *args)
-    end
+    Hash[get_interfaces_for(target_interfaces).map do |name, klass|
+      [name, klass.__send__(method, *args)]
+    end]
   end
 
   private
 
   def get_interfaces_for(target_interfaces)
-    targets = Array(target_interfaces)
+    targets = Array(target_interfaces).map(&:to_sym)
     found_interfaces = @interfaces.select do |name, _klass|
       targets.delete(name)
     end

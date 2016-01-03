@@ -11,5 +11,8 @@
 !/log/.keep
 !/tmp/.keep
 
+# ignore uploads
+/public/uploads/*
+
 # no clue where this comes from, must be a beta thing
 mkmf.log
