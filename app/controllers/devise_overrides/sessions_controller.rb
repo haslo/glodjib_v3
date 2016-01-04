@@ -9,8 +9,8 @@ class DeviseOverrides::SessionsController < Devise::SessionsController
   end
 
   def create
-    email    = request.headers['X-Auth-Email'].presence || params[:email].presence
-    password = request.headers['X-Auth-Password'].presence || params[:password].presence
+    email    = params[:email].presence
+    password = params[:password].presence
     user     = User.find_by(email: email)
     if user && user.valid_password?(password)
       sign_in(user, store: false)
@@ -18,7 +18,7 @@ class DeviseOverrides::SessionsController < Devise::SessionsController
         user.authentication_token = generate_authentication_token
         user.save!
       end
-      render json: { token: user.authentication_token }, status: 200
+      render json: { user: user.id, token: user.authentication_token }, status: 200
     else
       render json: { error: 'login credentials were wrong' }, status: 401
     end
